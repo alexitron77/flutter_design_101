@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
 
 import '../model/flight.dart';
 import '../model/hotel.dart';
@@ -39,7 +40,7 @@ class HomePage extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       children: [
         const HomepageHeader(),
-        const SearchBar(),
+        const SearchBar(icon: LineIcons.search),
         const SectionHeader(sectionHeaderTitle: "Upcoming Flights"),
         Carousel(cards: flightTicketWidgets),
         const SectionHeader(sectionHeaderTitle: "Hotels"),

@@ -4,22 +4,27 @@ import 'package:line_icons/line_icons.dart';
 import '../utils/styles.dart';
 
 class SearchBar extends StatelessWidget {
-  const SearchBar({Key? key}) : super(key: key);
+  final IconData icon;
+
+  const SearchBar({Key? key, required this.icon}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 20),
+    return Container(
+      height: 60,
+      margin: const EdgeInsets.only(top: 20),
       child: TextField(
         autofocus: false,
         decoration: InputDecoration(
-          prefixIcon:
-          Icon(LineIcons.search, color: Styles.primaryColor),
+          prefixIcon: Icon(icon, color: Styles.primaryColor),
           hintText: "Search for a flight",
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20),
-            borderSide:
-            BorderSide(color: Styles.primaryColor, width: 2),
+            borderSide: BorderSide(color: Styles.primaryColor, width: 2),
+          ),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(20),
+            borderSide: BorderSide(color: Styles.primaryColor, width: 2),
           ),
         ),
       ),

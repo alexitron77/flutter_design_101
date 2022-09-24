@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:thatshake/pages/searchPage.dart';
 
 import 'pages/homepage.dart';
 import 'utils/styles.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int _selectedIndex = 0;
 
-  List<Widget> screens = [const HomePage(), const Text("List")];
+  List<Widget> screens = [const HomePage(), const SearchPage()];
 
   selectIndex(int index) {
     setState(() => _selectedIndex = index);
@@ -46,7 +47,7 @@ class _MyAppState extends State<MyApp> {
           currentIndex: _selectedIndex,
           items: const [
             BottomNavigationBarItem(label: "home", icon: Icon(LineIcons.home)),
-            BottomNavigationBarItem(label: "list", icon: Icon(LineIcons.list))
+            BottomNavigationBarItem(label: "search", icon: Icon(LineIcons.search))
           ],
         ),
       ),
