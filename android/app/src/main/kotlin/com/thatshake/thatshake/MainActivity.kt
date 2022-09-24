@@ -1,0 +1,6 @@
+package com.thatshake.thatshake
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
